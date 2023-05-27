@@ -1,4 +1,6 @@
 require("nvim-tree").setup({
+  sync_root_with_cwd = true,
+  update_cwd = true,
   sort_by = "case_sensitive",
   renderer = {
     group_empty = true,

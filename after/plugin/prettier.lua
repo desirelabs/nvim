@@ -1,2 +1,8 @@
--- set <C-f> to format the current buffer
-vim.api.nvim_set_keymap('n', '<C-f>', ':Prettier<CR>', { noremap = true, silent = true })
+local prettier = require("prettier")
+
+prettier.setup({
+  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
+  filetypes = {
+    "html", "javascript", "javascriptreact", "typescriptreact", "typescript", "css", "json", "yaml", "markdown", "vue",
+  },
+})
